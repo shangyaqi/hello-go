@@ -1,5 +1,5 @@
 FROM golang AS build-env
-ADD . /go/src/app
+ADD .. /go/src/app
 WORKDIR /go/src/app
 RUN go build -v -o /go/src/app/hello-go
 
