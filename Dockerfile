@@ -1,10 +1,8 @@
-FROM golang AS build-env
+FROM 172.30.10.185:15000/common/golang:1.16.7 AS build-env
 ADD . /go/src/app
 WORKDIR /go/src/app
 RUN go build 
-FROM alpine
-RUN apk add -U tzdata
-RUN ln -sf /usr/share/zoneinfo/Asia/Shanghai  /etc/localtime
+FROM 172.30.10.185:15000/common/golang:1.16.7
 COPY --from=build-env /go/src/app/hello-go /usr/local/bin/hello-go
 EXPOSE 9090
 CMD [ "hello-go" ]
