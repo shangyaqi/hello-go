@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
         - name: helloworld
-          image: shangyaqi/argosay:v3
+          image: shangyaqi/argosay:v4
           resources:
             requests:
               cpu: "100m"
