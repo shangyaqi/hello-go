@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_hello_go_1683271064007-pr-trigger-input-set
+  identifier: Build_hello_go_1683271064007prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: citest
+  pipeline:
+    identifier: Build_hello_go_1683271064007
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
